@@ -1,6 +1,6 @@
 # Obfuscate Java  
 ![Obfuscate Thumbnail – Cracker khóc thét khi gặp JAR đã bảo vệ](9829137a-7796-431a-bf60-441315166808.jpg)
-## 🎯 1. Các lý do quan trọng nhất
+# Tại sao bạn PHẢI Obfuscate ứng dụng Java
 (Lý do thực tế 2025 – từ góc nhìn dev & công ty Việt Nam)
 
 | Lý do quan trọng                                   | Hậu quả nếu KHÔNG obfuscate                                                                 | Ví dụ thực tế tại Việt Nam (2023-2025)                                                                 |
@@ -35,26 +35,26 @@ Không obfuscate = tự mở cửa cho đối thủ và hacker.
 **Danh sách công cụ miễn phí & trả phí tốt nhất 2025**  
 *Cập nhật tháng 11/2025 – Tổng hợp thực tế từ dev Việt Nam & Đông Nam Á*
 
-## 1. Công cụ MIỄN PHÍ (Free)
+## 1. Công cụ MIỄN PHÍ
 
-| Tool / Công cụ     | Độ mạnh bảo vệ | Spring Boot | String Enc | Control Flow | Loại ứng dụng phù hợp | Ghi chú |
-|--------------------|----------------|-------------|-------------|---------------|------------------------|---------|
-| **ProGuard**       | ![Medium](https://img.shields.io/badge/Trung_bình-★★★☆☆-yellow) | ✔️ Tốt | ❌ | Nhẹ | Java GUI, Desktop nhỏ, Tool nội bộ | MIỄN PHÍ, dễ reverse |
-| **R8 (Google)**    | ![Medium](https://img.shields.io/badge/Trung_bình-★★★☆☆-yellow) | ✔️ Rất tốt | ❌ | Nhẹ | **Android**, JVM Service | Chuẩn Android mặc định |
-| **yGuard**         | ![Weak](https://img.shields.io/badge/Yếu-★★☆☆☆-lightgrey) | ⚠️ TB | ❌ | ❌ | Java Desktop, app nhỏ | Chỉ rename class/package |
-| **Các tool GitHub**| ![VeryWeak](https://img.shields.io/badge/Rất_yếu-★☆☆☆☆-lightgrey) | ❌ | ❌ | ❌ | Demo/học tập | KHÔNG dùng thương mại |
+| Tool            | Độ mạnh bảo vệ | Hỗ trợ Spring Boot | String Encryption | Control Flow | Ghi chú                                      |
+|-----------------|----------------|--------------------|-------------------|--------------|----------------------------------------------|
+| ProGuard        | Trung bình     | Tốt (cần config)   | Không             | Nhẹ          | Miễn phí mãi mãi, dễ reverse nhất            |
+| R8 (Google)     | Trung bình     | Rất tốt            | Không             | Nhẹ          | Nhanh hơn ProGuard, dùng cả Android & JVM    |
+| yGuard          | Yếu            | Trung bình         | Không             | Không        | Chỉ rename package/class                     |
+| Các tool GitHub | Rất yếu        | Thường không       | Không             | Không        | Chỉ để học, không dùng thương mại            |
 
 ## 2. Công cụ TRẢ PHÍ (Commercial) – Đáng tiền nhất 2025
 
-| STT | Tool / Công cụ        | Giá 2025 | Độ mạnh tổng thể | Spring Boot | String Enc | Control Flow | Loại ứng dụng phù hợp | Ghi chú |
-|-----|------------------------|----------|-------------------|-------------|------------|---------------|------------------------|---------|
-| **1** | **Allatori**            | $399 – $1.190/năm | ![Strong](https://img.shields.io/badge/Rất_mạnh-★★★★☆-green) | ✔️ Xuất sắc | Mạnh | Mạnh | **Spring Boot, Desktop, SaaS, Microservice** | Tool phổ biến nhất Việt Nam |
-| **2** | **Zelix KlassMaster**   | $795 – $1.995 (lifetime) | ![Ultra](https://img.shields.io/badge/CỰC_MẠNH-★★★★★-brightgreen) | ✔️ Xuất sắc | **CỰC MẠNH** | **CỰC MẠNH** | **Fintech, Banking, Engine tính toán, Desktop JAR** | TOP 1 thị trường JVM |
-| **3** | **DashO (PreEmptive)**  | $999 – $2.999/năm | ![Strong](https://img.shields.io/badge/Rất_mạnh-★★★★☆-green) | ✔️ Xuất sắc | Mạnh | Mạnh | **Enterprise, Bank, Microservice, Desktop** | Anti-tamper mạnh |
-| **4** | **Stringer**            | $950 – $2.500/năm | ![Special](https://img.shields.io/badge/Chuyên_string-★★★★☆-blue) | ✔️ Xuất sắc | **SIÊU MẠNH** | Mạnh | **API server, License server, Fintech, Banking** | Giấu API Key/secret tốt nhất |
-| **5** | **Protector4J**         | $799/năm | ![Good](https://img.shields.io/badge/Khá_mạnh-★★★☆☆-orange) | ✔️ Xuất sắc | Có | TB | **Java Desktop → JARX, SaaS, phần mềm bán license** | JAR→JARX native |
-| **6** | **GuardSquare JProtect**| ~$1.500+/năm | ![Strong](https://img.shields.io/badge/Rất_mạnh-★★★★☆-green) | ✔️ Xuất sắc | Có | Có | **Châu Âu, backend, doanh nghiệp lớn** | Uy tín cao |
-| **7** | **Digital.ai (Arxan)**  | Hàng chục nghìn USD | ![Ultra](https://img.shields.io/badge/Cực_mạnh_+_Anti--Tamper-★★★★★-brightgreen) | ✔️ Enterprise | Có | Có | **Ngân hàng quốc tế, Enterprise top-tier** | Mạnh nhất thế giới |
+| STT | Tool                 | Giá (ước tính 2025)            | Độ mạnh tổng thể   | Spring Boot | String Encryption | Control Flow | Phổ biến nhất tại          |
+|-----|----------------------|--------------------------------|--------------------|-------------|-------------------|--------------|----------------------------|
+| 1   | Allatori             | $399 – $1.190/năm              | Rất mạnh           | Xuất sắc    | Mạnh              | Mạnh         | Việt Nam, Thái, Indo       |
+| 2   | Zelix KlassMaster    | $795 – $1.995 (mua 1 lần)      | CỰC MẠNH (top 1)   | Xuất sắc    | CỰC MẠNH          | CỰC MẠNH     | Ngân hàng, công ty lớn     |
+| 3   | DashO (PreEmptive)   | $999 – $2.999/năm              | Rất mạnh           | Xuất sắc    | Mạnh              | Mạnh         | Fintech, ngân hàng lớn     |
+| 4   | Stringer             | $950 – $2.500/năm              | Chuyên string      | Xuất sắc    | SIÊU MẠNH         | Mạnh         | Chống leak key/API         |
+| 5   | Protector4J          | $799/năm (Individual)          | Khá mạnh           | Xuất sắc    | Có (Enterprise)   | Trung bình   | Đang lên nhanh tại châu Á  |
+| 6   | GuardSquare JProtect | ~$1.500+/năm                   | Rất mạnh           | Xuất sắc    | Có                | Có           | Châu Âu, Mỹ                |
+| 7   | Digital.ai (Arxan)   | Doanh nghiệp lớn (hàng chục nghìn USD) | Cực mạnh + anti-tamper | Có      | Có                | Có           | Ngân hàng quốc tế          |
 
 ## Top 3 được dùng nhiều nhất tại Việt Nam (2025)
 1. **Allatori** → Giá hợp lý, mạnh, dễ dùng → ~70% startup & công ty vừa chọn  
@@ -148,6 +148,3 @@ Nhưng đừng bao giờ tin rằng nó biến app thành thành trì vĩnh vi�
 > Bắt đầu thử → Allatori hoặc Protector4J (có trial ngon)  
 > Muốn “không ai reverse được” → Zelix KlassMaster là đích đến cuối cùng!
 **Chúc bạn obfuscate thành công – không còn sợ reverse nữa!**
-
-
-## 🔥 Liên hệ telegram @akm8668 nếu bạn muốn hỗ trợ.
